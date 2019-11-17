@@ -40,40 +40,17 @@ classdef usbl4
         end
         
         function toas = toas(usbl4, signals)
+            tic
             toas = zeros(3,1);
             assert(all(size(signals) == [4,usbl4.params.blockLen]), "signals must be 4xblockLen");
             oldPts = linspace(0,usbl4.params.blockLen, usbl4.params.blockLen);
             interpFactor = 10;
             newPts = linspace(0,usbl4.params.blockLen, usbl4.params.blockLen * interpFactor);
             
-            figure;
-            t = linspace(0,size(signals,2)/usbl4.params.sampleRate,size(signals,2));
-            subplot(4,1,1);
-            plot(t,signals(1,:));
-            subplot(4,1,2);
-            plot(t,signals(2,:));
-            subplot(4,1,3);
-            plot(t,signals(3,:));
-            subplot(4,1,4);
-            plot(t,signals(4,:));
-            suptitle('Input signals');
-            
             s1 = interp1(oldPts, signals(1,:), newPts, 'spline');
             s2 = interp1(oldPts, signals(2,:), newPts, 'spline');
             s3 = interp1(oldPts, signals(3,:), newPts, 'spline');
             s4 = interp1(oldPts, signals(4,:), newPts, 'spline');
-            
-            figure;
-            t = linspace(0,size(s1,2)/(usbl4.params.sampleRate*interpFactor),size(s1,2));
-            subplot(4,1,1);
-            plot(t,s1);
-            subplot(4,1,2);
-            plot(t,s2);
-            subplot(4,1,3);
-            plot(t,s3);
-            subplot(4,1,4);
-            plot(t,s4);
-            suptitle('Interpolated Signals');
             
             threshold = 0.5;
             preCrop = 400*1e-6*usbl4.params.sampleRate;
@@ -94,36 +71,9 @@ classdef usbl4
             s3(p3+postCrop:end) = 0;
             s4(p4+postCrop:end) = 0;
             
-            figure;
-            t = linspace(0,size(s1,2)/(usbl4.params.sampleRate*interpFactor),size(s1,2));
-            subplot(4,1,1);
-            plot(t,s1);
-            subplot(4,1,2);
-            plot(t,s2);
-            subplot(4,1,3);
-            plot(t,s3);
-            subplot(4,1,4);
-            plot(t,s4);
-            suptitle('Cropped Signals');
-            
-            
-            c1 = xcorr(s2,s1);
-            c2 = xcorr(s3,s1);
-            c3 = xcorr(s4,s1);
-            [~, corr1] = max(c1);
-            [~, corr2] = max(c2);
-            [~, corr3] = max(c3);
-            
-            figure;
-            t = linspace(0,size(c1,2)/(usbl4.params.sampleRate*interpFactor),size(c1,2)) ...
-                - size(c1,2)/(usbl4.params.sampleRate*interpFactor*2);
-            subplot(3,1,1);
-            plot(t,c1);
-            subplot(3,1,2);
-            plot(t,c2);
-            subplot(3,1,3);
-            plot(t,c3);
-            suptitle('Correlations against h1');
+            [~, corr1] = max(xcorr(s2,s1));
+            [~, corr2] = max(xcorr(s3,s1));
+            [~, corr3] = max(xcorr(s4,s1));
             
             toas(1) = (size(s1,2) - corr1)/(usbl4.params.sampleRate*interpFactor);
             toas(2) = (size(s1,2) - corr2)/(usbl4.params.sampleRate*interpFactor);

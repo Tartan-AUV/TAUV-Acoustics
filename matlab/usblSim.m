@@ -21,7 +21,7 @@ classdef usblSim
             d2 = norm(usbl.h2 - pingPos');
             d3 = norm(usbl.h3 - pingPos');
             d4 = norm(usbl.h4 - pingPos');
-            
+              
             obj.delays = [d1/usbl.params.speedOfSound;
                           d2/usbl.params.speedOfSound;
                           d3/usbl.params.speedOfSound;
@@ -36,6 +36,11 @@ classdef usblSim
             signals(2,:) = fun(t - sim.delays(2) * ones(size(t)));
             signals(3,:) = fun(t - sim.delays(3) * ones(size(t)));
             signals(4,:) = fun(t - sim.delays(4) * ones(size(t)));
+            
+            signals(1,:) = awgn(signals(1,:), 20);
+            signals(2,:) = awgn(signals(2,:), 20);
+            signals(3,:) = awgn(signals(3,:), 20);
+            signals(4,:) = awgn(signals(4,:), 20);
         end
         
         function pingSigs = delayPinger(sim, freq, duration)
@@ -50,17 +55,34 @@ classdef usblSim
             
         end
         
-        function plotSigs = plotSigs(sim, freq, duration)
-            sigs = delayPinger(sim, freq, duration);
-            t = linspace(0,duration, sim.usbl.params.sampleRate * duration);
+        function [] = plotSigs(sim, sigs)
+            figure;
+            t = linspace(0,size(sigs,2)/sim.usbl.params.sampleRate,size(sigs,2));
             plot(t,sigs(1,:));
             hold on
             plot(t,sigs(2,:));
             plot(t,sigs(3,:));
             plot(t,sigs(4,:));
+            title('Simulated Hydrophone Data')
+            legend('h1','h2','h3','h4');
             xlabel('time (s)')
             ylabel('amplitude')
         end
+        
+        function sigs = cropSignal(sim, signals, preCrop, postCrop, threshold)
+            %CROPSIGNAL Summary of this function goes here
+            %   Detailed explanation goes here
+
+            padded = [zeros(4,preCrop), signals, zeros(4,postCrop)];
+            pass = padded(1,:) > threshold;
+            p = find(pass, 1);
+
+            p0 = p - preCrop;
+            p1 = p + postCrop;
+
+            sigs = padded(:, p0:p1-1);
+        end
+
     end
 end
 
