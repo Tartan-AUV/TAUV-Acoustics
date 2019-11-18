@@ -39,12 +39,12 @@ classdef usbl4
             bearing = bearing/norm(bearing);
         end
         
-        function toas = toas(usbl4, signals)
+        function toas = toas(usbl4, signals, passBand)
             toas = zeros(3,1);
-            assert(all(size(signals) == [4,usbl4.params.blockLen]), "signals must be 4xblockLen");
-            oldPts = linspace(0,usbl4.params.blockLen, usbl4.params.blockLen);
+            %assert(all(size(signals) == [4,usbl4.params.blockLen]), "signals must be 4xblockLen");
+            oldPts = linspace(0, size(signals,2), size(signals,2));
             interpFactor = 10;
-            newPts = linspace(0,usbl4.params.blockLen, usbl4.params.blockLen * interpFactor);
+            newPts = linspace(0, size(signals,2), size(signals,2) * interpFactor);
             
             figure;
             t = linspace(0,size(signals,2)/usbl4.params.sampleRate,size(signals,2));
@@ -58,10 +58,28 @@ classdef usbl4
             plot(t,signals(4,:));
             suptitle('Input signals');
             
-            s1 = interp1(oldPts, signals(1,:), newPts, 'spline');
-            s2 = interp1(oldPts, signals(2,:), newPts, 'spline');
-            s3 = interp1(oldPts, signals(3,:), newPts, 'spline');
-            s4 = interp1(oldPts, signals(4,:), newPts, 'spline');
+            s1 = bandpass(signals(1,:), passBand, usbl4.params.sampleRate, 'Steepness', 0.95);
+            s2 = bandpass(signals(2,:), passBand, usbl4.params.sampleRate, 'Steepness', 0.95);
+            s3 = bandpass(signals(3,:), passBand, usbl4.params.sampleRate, 'Steepness', 0.95);
+            s4 = bandpass(signals(4,:), passBand, usbl4.params.sampleRate, 'Steepness', 0.95);
+            
+            figure;
+            t = linspace(0,size(s1,2)/(usbl4.params.sampleRate),size(s1,2));
+            subplot(4,1,1);
+            plot(t,s1);
+            subplot(4,1,2);
+            plot(t,s2);
+            subplot(4,1,3);
+            plot(t,s3);
+            subplot(4,1,4);
+            plot(t,s4);
+            suptitle('Bandpass Filtered Signals');
+            
+            
+            s1 = interp1(oldPts, s1, newPts, 'spline');
+            s2 = interp1(oldPts, s2, newPts, 'spline');
+            s3 = interp1(oldPts, s3, newPts, 'spline');
+            s4 = interp1(oldPts, s4, newPts, 'spline');
             
             figure;
             t = linspace(0,size(s1,2)/(usbl4.params.sampleRate*interpFactor),size(s1,2));
@@ -75,9 +93,9 @@ classdef usbl4
             plot(t,s4);
             suptitle('Interpolated Signals');
             
-            threshold = 0.5;
-            preCrop = 400*1e-6*usbl4.params.sampleRate;
-            postCrop = 800*1e-6*usbl4.params.sampleRate;
+            threshold = 1;
+            preCrop = 800*1e-6*usbl4.params.sampleRate;
+            postCrop = 1500*1e-6*usbl4.params.sampleRate;
             
             p1 = find(s1 > threshold,1);
             p2 = find(s2 > threshold,1);
