@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Thu Nov 30 00:05:40 2023
+# Process ID: 24128
+# Current directory: C:/Dev/TAUV-Acoustics/hdl/acoustics-v2-zybo/acoustics-v2-zybo.runs/impl_1
+# Command line: vivado.exe -log LTC2315_Driver_Wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source LTC2315_Driver_Wrapper.tcl -notrace
+# Log file: C:/Dev/TAUV-Acoustics/hdl/acoustics-v2-zybo/acoustics-v2-zybo.runs/impl_1/LTC2315_Driver_Wrapper.vdi
+# Journal file: C:/Dev/TAUV-Acoustics/hdl/acoustics-v2-zybo/acoustics-v2-zybo.runs/impl_1\vivado.jou
+# Running On: Gleb-ThinkPad, OS: Windows, CPU Frequency: 2304 MHz, CPU Physical cores: 4, Host memory: 16942 MB
+#-----------------------------------------------------------
+source LTC2315_Driver_Wrapper.tcl -notrace

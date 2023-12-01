@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Thu Nov 30 01:49:02 2023
+# Process ID: 3412
+# Current directory: C:/Dev/TAUV-Acoustics/hdl/acoustics-v2-zybo/acoustics-v2-zybo.runs/synth_1
+# Command line: vivado.exe -log AGC_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source AGC_wrapper.tcl
+# Log file: C:/Dev/TAUV-Acoustics/hdl/acoustics-v2-zybo/acoustics-v2-zybo.runs/synth_1/AGC_wrapper.vds
+# Journal file: C:/Dev/TAUV-Acoustics/hdl/acoustics-v2-zybo/acoustics-v2-zybo.runs/synth_1\vivado.jou
+# Running On: Gleb-ThinkPad, OS: Windows, CPU Frequency: 2304 MHz, CPU Physical cores: 4, Host memory: 16942 MB
+#-----------------------------------------------------------
+source AGC_wrapper.tcl -notrace
