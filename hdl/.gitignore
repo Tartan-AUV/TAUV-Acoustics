@@ -2,3 +2,8 @@
 *.cache/
 .vscode/
 *.code-workspace
+**/output/
+**/.Xil/
+**/reports/
+vivado.*
+vivado_*.*
