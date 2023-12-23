@@ -1,0 +1,15 @@
+
+M = 4;
+data = randi([0 M-1], 1000, 1);
+
+modulated_data = pskmod(data, M);
+scatterplot(rxSig)
+
+fs = 5e6;
+fc = 480e3;
+
+span = 10;
+rolloff = 0.25;
+pulse_shape = rcosdesign(roloff, span, fs, 'sqrt');
+
+upsampled_data = upsample(tx_data, )
