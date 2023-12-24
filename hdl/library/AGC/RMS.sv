@@ -11,7 +11,7 @@ module RMS
 
     logic [WINDOW_2N-1:0] write_idx;
     logic [WINDOW_2N:0] initial_write_cntr;
-    logic [(2**WINDOW_2N-1):0][WIDTH*2-1:0] fifo ;
+    reg [WIDTH*2-1:0] fifo [(2**WINDOW_2N-1):0];
 
     logic [WIDTH*2-1:0] tail;
 
@@ -40,7 +40,7 @@ module RMS
         if (~reset_n) begin
             write_idx <= '0;
             rms_TVALID <= 0;
-            fifo <= '0;
+//            fifo <= '0;
         end else if (s_TVALID) begin
             fifo[write_idx] <= s_sq;
             write_idx <= write_idx + 1;
