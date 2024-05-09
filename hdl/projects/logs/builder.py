@@ -15,3 +15,5 @@ comp.build()
 comp = client.get_component(name="hello_world")
 comp.build()
 
+vitis.dispose()
+
