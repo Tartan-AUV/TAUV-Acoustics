@@ -2,7 +2,7 @@
 //Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2023.2 (lin64) Build 4029153 Fri Oct 13 20:13:54 MDT 2023
-//Date        : Wed May  8 02:56:18 2024
+//Date        : Thu May  9 19:20:25 2024
 //Host        : tartanauv-ws-1 running 64-bit Ubuntu 20.04.6 LTS
 //Command     : generate_target top.bd
 //Design      : top
@@ -10,9 +10,12 @@
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "top,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=top,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=3,numReposBlks=3,numNonXlnxBlks=0,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_board_cnt=2,da_clkrst_cnt=1,da_ps7_cnt=1,synth_mode=Hierarchical}" *) (* HW_HANDOFF = "top.hwdef" *) 
+(* CORE_GENERATION_INFO = "top,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=top,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=4,numReposBlks=4,numNonXlnxBlks=0,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=1,numPkgbdBlks=0,bdsource=USER,da_board_cnt=2,da_clkrst_cnt=1,da_ps7_cnt=1,synth_mode=Hierarchical}" *) (* HW_HANDOFF = "top.hwdef" *) 
 module top
    (AFE0_CONV_CLK,
+    AFE0_SPI_CS,
+    AFE0_SPI_MOSI,
+    AFE0_SPI_SCK,
     DDR_addr,
     DDR_ba,
     DDR_cas_n,
@@ -35,6 +38,9 @@ module top
     FIXED_IO_ps_porb,
     FIXED_IO_ps_srstb);
   output AFE0_CONV_CLK;
+  output AFE0_SPI_CS;
+  output AFE0_SPI_MOSI;
+  output AFE0_SPI_SCK;
   (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 DDR ADDR" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME DDR, AXI_ARBITRATION_SCHEME TDM, BURST_LENGTH 8, CAN_DEBUG false, CAS_LATENCY 11, CAS_WRITE_LATENCY 11, CS_ENABLED true, DATA_MASK_ENABLED true, DATA_WIDTH 8, MEMORY_TYPE COMPONENTS, MEM_ADDR_MAP ROW_COLUMN_BANK, SLOT Single, TIMEPERIOD_PS 1250" *) inout [14:0]DDR_addr;
   (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 DDR BA" *) inout [2:0]DDR_ba;
   (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 DDR CAS_N" *) inout DDR_cas_n;
@@ -57,6 +63,9 @@ module top
   (* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_PORB" *) inout FIXED_IO_ps_porb;
   (* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_SRSTB" *) inout FIXED_IO_ps_srstb;
 
+  wire LTC6912_Driver_Wrapp_0_cs;
+  wire LTC6912_Driver_Wrapp_0_mosi;
+  wire LTC6912_Driver_Wrapp_0_sck;
   wire clk_wiz_0_clk_out1;
   wire [14:0]processing_system7_0_DDR_ADDR;
   wire [2:0]processing_system7_0_DDR_BA;
@@ -83,6 +92,15 @@ module top
   wire processing_system7_0_FIXED_IO_PS_SRSTB;
 
   assign AFE0_CONV_CLK = clk_wiz_0_clk_out1;
+  assign AFE0_SPI_CS = LTC6912_Driver_Wrapp_0_cs;
+  assign AFE0_SPI_MOSI = LTC6912_Driver_Wrapp_0_mosi;
+  assign AFE0_SPI_SCK = LTC6912_Driver_Wrapp_0_sck;
+  top_LTC6912_Driver_Wrapp_0_0 LTC6912_Driver_Wrapp_0
+       (.clk(clk_wiz_0_clk_out1),
+        .cs(LTC6912_Driver_Wrapp_0_cs),
+        .mosi(LTC6912_Driver_Wrapp_0_mosi),
+        .reset_n(processing_system7_0_FCLK_RESET0_N),
+        .sck(LTC6912_Driver_Wrapp_0_sck));
   top_clk_wiz_0_0 clk_wiz_0
        (.clk_in1(processing_system7_0_FCLK_CLK0),
         .clk_out1(clk_wiz_0_clk_out1),

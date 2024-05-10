@@ -85,7 +85,13 @@ set_property PACKAGE_PIN T12 [get_ports rgmii_port_2_tx_ctl]
 
 # AFE PORTS
 set_property IOSTANDARD LVCMOS33 [get_ports AFE0_CONV_CLK]
+set_property IOSTANDARD LVCMOS33 [get_ports AFE0_SPI_SCK]
+set_property IOSTANDARD LVCMOS33 [get_ports AFE0_SPI_CS]
+set_property IOSTANDARD LVCMOS33 [get_ports AFE0_SPI_MOSI]
 set_property PACKAGE_PIN L20 [get_ports AFE0_CONV_CLK]
+set_property PACKAGE_PIN K17 [get_ports AFE0_SPI_SCK]
+set_property PACKAGE_PIN L19 [get_ports AFE0_SPI_CS]
+set_property PACKAGE_PIN K18 [get_ports AFE0_SPI_MOSI]
 
 #set_property PACKAGE_PIN N18 [get_ports rgmii_port_1_clk125]
 #set_property PACKAGE_PIN U18 [get_ports rgmii_port_2_clk125]

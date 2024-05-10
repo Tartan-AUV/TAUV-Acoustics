@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x778EFB05C5EAB1C0",
+      "boundary_crc": "0x5D37F9F76E5634D2",
       "device": "xc7z020clg400-1",
       "gen_directory": "../../../../ADC-Test.gen/sources_1/bd/top",
       "name": "top",
@@ -13,7 +13,8 @@
     "design_tree": {
       "processing_system7_0": "",
       "proc_sys_reset_0": "",
-      "clk_wiz_0": ""
+      "clk_wiz_0": "",
+      "LTC6912_Driver_Wrapp_0": ""
     },
     "interface_ports": {
       "DDR": {
@@ -202,6 +203,15 @@
             "value_src": "ip_prop"
           }
         }
+      },
+      "AFE0_SPI_CS": {
+        "direction": "O"
+      },
+      "AFE0_SPI_SCK": {
+        "direction": "O"
+      },
+      "AFE0_SPI_MOSI": {
+        "direction": "O"
       }
     },
     "components": {
@@ -1213,6 +1223,54 @@
             "value": "ACTIVE_LOW"
           }
         }
+      },
+      "LTC6912_Driver_Wrapp_0": {
+        "vlnv": "xilinx.com:module_ref:LTC6912_Driver_Wrapper:1.0",
+        "ip_revision": "1",
+        "xci_name": "top_LTC6912_Driver_Wrapp_0_0",
+        "xci_path": "ip/top_LTC6912_Driver_Wrapp_0_0/top_LTC6912_Driver_Wrapp_0_0.xci",
+        "inst_hier_path": "LTC6912_Driver_Wrapp_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "LTC6912_Driver_Wrapper",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "reset_n": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "10000000",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "/clk_wiz_0_clk_out1",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "ready": {
+            "direction": "O"
+          },
+          "mosi": {
+            "direction": "O"
+          },
+          "sck": {
+            "direction": "O"
+          },
+          "cs": {
+            "direction": "O"
+          }
+        }
       }
     },
     "interface_nets": {
@@ -1230,10 +1288,29 @@
       }
     },
     "nets": {
+      "LTC6912_Driver_Wrapp_0_cs": {
+        "ports": [
+          "LTC6912_Driver_Wrapp_0/cs",
+          "AFE0_SPI_CS"
+        ]
+      },
+      "LTC6912_Driver_Wrapp_0_mosi": {
+        "ports": [
+          "LTC6912_Driver_Wrapp_0/mosi",
+          "AFE0_SPI_MOSI"
+        ]
+      },
+      "LTC6912_Driver_Wrapp_0_sck": {
+        "ports": [
+          "LTC6912_Driver_Wrapp_0/sck",
+          "AFE0_SPI_SCK"
+        ]
+      },
       "clk_wiz_0_clk_out1": {
         "ports": [
           "clk_wiz_0/clk_out1",
-          "AFE0_CONV_CLK"
+          "AFE0_CONV_CLK",
+          "LTC6912_Driver_Wrapp_0/clk"
         ]
       },
       "processing_system7_0_FCLK_CLK0": {
@@ -1247,7 +1324,8 @@
         "ports": [
           "processing_system7_0/FCLK_RESET0_N",
           "proc_sys_reset_0/ext_reset_in",
-          "clk_wiz_0/resetn"
+          "clk_wiz_0/resetn",
+          "LTC6912_Driver_Wrapp_0/reset_n"
         ]
       }
     }
