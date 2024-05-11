@@ -1,10 +1,14 @@
 
 
 module LTC6912_Driver_Wrapper
-    #(parameter INPUT_DATA = 8'b0001_0001)
+    #(parameter INPUT_DATA = 8'b0111_0111)
    (input wire reset_n, clk,
     output wire ready,
-    output wire mosi, sck, cs);
+    output wire mosi, sck, cs,
+    output reg high,
+    output reg low);
+    
+    
 
     // Making a simple FSM that sends the input val at the right time
     // Waits for the ready signal from the driver
@@ -16,6 +20,8 @@ module LTC6912_Driver_Wrapper
 
     // Flip-flops for FSM
     always @(posedge clk) begin
+        high <= 1'b1;
+        low <= 1'b0;
         if (reset_n == 1'b0) state <= 2'b00;
         else state <= nextState;
     end

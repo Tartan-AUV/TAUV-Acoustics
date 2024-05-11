@@ -1,0 +1,300 @@
+{
+    "ltx_root": {
+        "version": 4,
+        "minor": 0,
+        "ltx_data": [
+            {
+                "name": "EDA_PROBESET",
+                "active": true,
+                "debug_cores": [
+                    {
+                        "type": "XSDB_V3",
+                        "name": "dbg_hub",
+                        "spec": "labtools_xsdbm_v3",
+                        "clk_input_freq_hz": "100000000"
+                    },
+                    {
+                        "type": "ILA_V3",
+                        "name": "top_i/system_ila_0/inst/ila_lib",
+                        "spec": "labtools_ila_v6",
+                        "ipName": "ila",
+                        "core_location": {
+                            "user_chain": 1,
+                            "slave_index": 0,
+                            "bscan_switch_index": 0
+                        },
+                        "uuid": "3313BFF38A555272BAB4C0C7E458D2E8",
+                        "pins": [
+                            {
+                                "name": "probe0",
+                                "id": 0,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": false,
+                                "leftIndex": 0,
+                                "rightIndex": 0,
+                                "portIndex": 0,
+                                "nets": [
+                                    {
+                                        "name": "top_i/system_ila_0/inst/probe0_1",
+                                        "isBus": false,
+                                        "parentNetId": 0
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe1",
+                                "id": 1,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": false,
+                                "leftIndex": 0,
+                                "rightIndex": 0,
+                                "portIndex": 1,
+                                "nets": [
+                                    {
+                                        "name": "top_i/system_ila_0/inst/probe1_1",
+                                        "isBus": false
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe2",
+                                "id": 2,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": false,
+                                "leftIndex": 0,
+                                "rightIndex": 0,
+                                "portIndex": 2,
+                                "nets": [
+                                    {
+                                        "name": "top_i/system_ila_0/inst/probe2_1",
+                                        "isBus": false
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe3",
+                                "id": 3,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": false,
+                                "leftIndex": 0,
+                                "rightIndex": 0,
+                                "portIndex": 3,
+                                "nets": [
+                                    {
+                                        "name": "top_i/system_ila_0/inst/probe3_1",
+                                        "isBus": false
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe4",
+                                "id": 4,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": false,
+                                "leftIndex": 0,
+                                "rightIndex": 0,
+                                "portIndex": 4,
+                                "nets": [
+                                    {
+                                        "name": "top_i/system_ila_0/inst/probe4_1",
+                                        "isBus": false
+                                    }
+                                ]
+                            }
+                        ],
+                        "native_ports": [
+                            {
+                                "name": "probe0",
+                                "connectedBus": "clk_wiz_0_clk_out1",
+                                "protocol": "PROBE",
+                                "port_maps": [
+                                    {
+                                        "logical_port": "probe0",
+                                        "physical_pin": {
+                                            "id": 0,
+                                            "name": "probe0",
+                                            "leftBit": 0,
+                                            "width": 1
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe1",
+                                "connectedBus": "LTC6912_Driver_Wrapp_0_cs",
+                                "protocol": "PROBE",
+                                "port_maps": [
+                                    {
+                                        "logical_port": "probe1",
+                                        "physical_pin": {
+                                            "id": 1,
+                                            "name": "probe1",
+                                            "leftBit": 0,
+                                            "width": 1
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe2",
+                                "connectedBus": "LTC6912_Driver_Wrapp_0_mosi",
+                                "protocol": "PROBE",
+                                "port_maps": [
+                                    {
+                                        "logical_port": "probe2",
+                                        "physical_pin": {
+                                            "id": 2,
+                                            "name": "probe2",
+                                            "leftBit": 0,
+                                            "width": 1
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe3",
+                                "connectedBus": "LTC6912_Driver_Wrapp_0_sck",
+                                "protocol": "PROBE",
+                                "port_maps": [
+                                    {
+                                        "logical_port": "probe3",
+                                        "physical_pin": {
+                                            "id": 3,
+                                            "name": "probe3",
+                                            "leftBit": 0,
+                                            "width": 1
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe4",
+                                "port_maps": [
+                                    {
+                                        "logical_port": "probe4",
+                                        "physical_pin": {
+                                            "id": 4,
+                                            "name": "probe4",
+                                            "leftBit": 0,
+                                            "width": 1
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "ILA_V3",
+                        "name": "top_i/system_ila_1/inst/ila_lib",
+                        "spec": "labtools_ila_v6",
+                        "ipName": "ila",
+                        "core_location": {
+                            "user_chain": 1,
+                            "slave_index": 1,
+                            "bscan_switch_index": 0
+                        },
+                        "uuid": "2EC135136BE15BFB8FFE6E42B32A8449",
+                        "pins": [
+                            {
+                                "name": "probe0",
+                                "id": 5,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": true,
+                                "leftIndex": 0,
+                                "rightIndex": 9,
+                                "portIndex": 0,
+                                "nets": [
+                                    {
+                                        "name": "top_i/system_ila_1/inst/probe0_1",
+                                        "isBus": true,
+                                        "subnets": [
+                                            {
+                                                "name": "top_i/system_ila_1/inst/probe0_1[9]"
+                                            },
+                                            {
+                                                "name": "top_i/system_ila_1/inst/probe0_1[8]"
+                                            },
+                                            {
+                                                "name": "top_i/system_ila_1/inst/probe0_1[7]"
+                                            },
+                                            {
+                                                "name": "top_i/system_ila_1/inst/probe0_1[6]"
+                                            },
+                                            {
+                                                "name": "top_i/system_ila_1/inst/probe0_1[5]"
+                                            },
+                                            {
+                                                "name": "top_i/system_ila_1/inst/probe0_1[4]"
+                                            },
+                                            {
+                                                "name": "top_i/system_ila_1/inst/probe0_1[3]"
+                                            },
+                                            {
+                                                "name": "top_i/system_ila_1/inst/probe0_1[2]"
+                                            },
+                                            {
+                                                "name": "top_i/system_ila_1/inst/probe0_1[1]"
+                                            },
+                                            {
+                                                "name": "top_i/system_ila_1/inst/probe0_1[0]"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ],
+                        "native_ports": [
+                            {
+                                "name": "probe0",
+                                "connectedBus": "AFE0_BUS",
+                                "protocol": "PROBE",
+                                "port_maps": [
+                                    {
+                                        "logical_port": "probe0",
+                                        "physical_pin": {
+                                            "id": 5,
+                                            "name": "probe0",
+                                            "leftBit": 0,
+                                            "width": 10
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "parent_nets": [
+                    {
+                        "id": 0,
+                        "name": "top_i/clk_wiz_0/inst/clk_out1",
+                        "state_reg": [
+                            {
+                                "name": "top_i/LTC6912_Driver_Wrapp_0/inst/driver/FSM_onehot_state_reg[0]",
+                                "states": [
+                                    {
+                                        "name": "IDLE",
+                                        "val": "001"
+                                    },
+                                    {
+                                        "name": "SCK_WAIT",
+                                        "val": "010"
+                                    },
+                                    {
+                                        "name": "TXN0",
+                                        "val": "100"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}
