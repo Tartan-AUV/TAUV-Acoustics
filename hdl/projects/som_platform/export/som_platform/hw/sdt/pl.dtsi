@@ -1,4 +1,0 @@
-/ {
-	amba_pl: amba_pl {
-	};
-};

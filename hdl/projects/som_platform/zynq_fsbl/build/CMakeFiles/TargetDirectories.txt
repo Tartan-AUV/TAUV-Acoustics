@@ -1,3 +1,0 @@
-/home/tartanauv/TAUV-Acoustics/hdl/projects/som_platform/zynq_fsbl/build/CMakeFiles/fsbl.elf.dir
-/home/tartanauv/TAUV-Acoustics/hdl/projects/som_platform/zynq_fsbl/build/CMakeFiles/edit_cache.dir
-/home/tartanauv/TAUV-Acoustics/hdl/projects/som_platform/zynq_fsbl/build/CMakeFiles/rebuild_cache.dir
