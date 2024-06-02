@@ -49,8 +49,7 @@ if {[llength $sources_sv] != 0} {
 read_xdc $project_constraints
 
 # Read platform-specific block design
-read_bd "../../platforms/myc-y7z020v2/top.bd"
-open_bd "../../platforms/myc-y7z020v2/top.bd"
+source top.tcl
 
 # Add PL configuration
 set_property source_mgmt_mode All [current_project]
@@ -62,7 +61,7 @@ create_bd_cell -type module -reference top_pl top_pl_0
 # Make disconnected ports external
 make_bd_pins_external [get_bd_cells top_pl_0]
 
-make_wrapper -top [get_files "top.bd"]
+generate_target synthesis [get_files top.bd]
 read_verilog [get_files "top.v"]
 
 # read_verilog 
