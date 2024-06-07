@@ -47,6 +47,8 @@
     <Option Name="ActiveSimSet" Val="sim_1"/>
     <Option Name="DefaultLib" Val="xil_defaultlib"/>
     <Option Name="ProjectType" Val="Default"/>
+    <Option Name="IPRepoPath" Val="$PPRDIR/../ip_repo/myip2_1_0"/>
+    <Option Name="IPRepoPath" Val="$PPRDIR/../ip_repo/wmyip_1_0"/>
     <Option Name="IPOutputRepo" Val="$PCACHEDIR/ip"/>
     <Option Name="IPDefaultOutputPath" Val="$PGENDIR/sources_1"/>
     <Option Name="IPCachePermission" Val="read"/>
@@ -105,12 +107,25 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
+      <File Path="$PSRCDIR/sources_1/new/LTC2236_Driver_Wrapper.v">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <File Path="$PSRCDIR/sources_1/bd/top/top.bd">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
+        <CompFileExtendedInfo CompFileName="top.bd" FileRelPathName="ip/top_LTC2236_Driver_Wrapp_0_0/top_LTC2236_Driver_Wrapp_0_0.xci">
+          <Proxy FileSetName="top_LTC2236_Driver_Wrapp_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="top.bd" FileRelPathName="ip/top_axi_dma_3/top_axi_dma_3.xci">
+          <Proxy FileSetName="top_axi_dma_3"/>
+        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="top.bd" FileRelPathName="ip/top_clk_wiz_0_0/top_clk_wiz_0_0.xci">
           <Proxy FileSetName="top_clk_wiz_0_0"/>
         </CompFileExtendedInfo>
@@ -120,17 +135,12 @@
         <CompFileExtendedInfo CompFileName="top.bd" FileRelPathName="ip/top_processing_system7_0_0/top_processing_system7_0_0.xci">
           <Proxy FileSetName="top_processing_system7_0_0"/>
         </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="top.bd" FileRelPathName="ip/top_rst_clk_wiz_0_10M_1/top_rst_clk_wiz_0_10M_1.xci">
+          <Proxy FileSetName="top_rst_clk_wiz_0_10M_1"/>
+        </CompFileExtendedInfo>
       </File>
       <File Path="$PGENDIR/sources_1/bd/top/hdl/top_wrapper.v">
         <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/new/LTC2236_Driver_Wrapper.v">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -203,6 +213,24 @@
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
+    <FileSet Name="top_rst_clk_wiz_0_10M_1" Type="BlockSrcs" RelSrcDir="$PSRCDIR/top_rst_clk_wiz_0_10M_1" RelGenDir="$PGENDIR/top_rst_clk_wiz_0_10M_1">
+      <Config>
+        <Option Name="TopModule" Val="top_rst_clk_wiz_0_10M_1"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="top_axi_dma_3" Type="BlockSrcs" RelSrcDir="$PSRCDIR/top_axi_dma_3" RelGenDir="$PGENDIR/top_axi_dma_3">
+      <Config>
+        <Option Name="TopModule" Val="top_axi_dma_3"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="top_LTC2236_Driver_Wrapp_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/top_LTC2236_Driver_Wrapp_0_0" RelGenDir="$PGENDIR/top_LTC2236_Driver_Wrapp_0_0">
+      <Config>
+        <Option Name="TopModule" Val="top_LTC2236_Driver_Wrapp_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
   </FileSets>
   <Simulators>
     <Simulator Name="XSim">
@@ -266,6 +294,38 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
+    <Run Id="top_rst_clk_wiz_0_10M_1_synth_1" Type="Ft3:Synth" SrcSet="top_rst_clk_wiz_0_10M_1" Part="xc7z020clg400-1" ConstrsSet="top_rst_clk_wiz_0_10M_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/top_rst_clk_wiz_0_10M_1_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/top_rst_clk_wiz_0_10M_1_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/top_rst_clk_wiz_0_10M_1_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2023"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="top_axi_dma_3_synth_1" Type="Ft3:Synth" SrcSet="top_axi_dma_3" Part="xc7z020clg400-1" ConstrsSet="top_axi_dma_3" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/top_axi_dma_3_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/top_axi_dma_3_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/top_axi_dma_3_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2023"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="top_LTC2236_Driver_Wrapp_0_0_synth_1" Type="Ft3:Synth" SrcSet="top_LTC2236_Driver_Wrapp_0_0" Part="xc7z020clg400-1" ConstrsSet="top_LTC2236_Driver_Wrapp_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/top_LTC2236_Driver_Wrapp_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/top_LTC2236_Driver_Wrapp_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/top_LTC2236_Driver_Wrapp_0_0_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2023"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
     <Run Id="impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="constrs_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" State="current" Dir="$PRUNDIR/impl_1" SynthRun="synth_1" IncludeInArchive="true" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/impl_1" LaunchOptions="-jobs 12 " AutoRQSDir="$PSRCDIR/utils_1/imports/impl_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023"/>
@@ -321,6 +381,59 @@
     <Run Id="top_processing_system7_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="top_processing_system7_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="top_processing_system7_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/top_processing_system7_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/top_processing_system7_0_0_impl_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2023"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="top_rst_clk_wiz_0_10M_1_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="top_rst_clk_wiz_0_10M_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="top_rst_clk_wiz_0_10M_1_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/top_rst_clk_wiz_0_10M_1_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/top_rst_clk_wiz_0_10M_1_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2023"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="top_axi_dma_3_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="top_axi_dma_3" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="top_axi_dma_3_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/top_axi_dma_3_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/top_axi_dma_3_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2023"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="top_LTC2236_Driver_Wrapp_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="top_LTC2236_Driver_Wrapp_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="top_LTC2236_Driver_Wrapp_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/top_LTC2236_Driver_Wrapp_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/top_LTC2236_Driver_Wrapp_0_0_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>

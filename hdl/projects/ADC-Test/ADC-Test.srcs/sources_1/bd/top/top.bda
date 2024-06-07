@@ -187,6 +187,60 @@
                 "VH": "2",
                 "VT": "PM",
                 "TU": "active"
+            },
+            "V3": {
+                "VT": "AC",
+                "BA": "0x00000000",
+                "HA": "0x1FFFFFFF",
+                "BP": "C_BASEADDR",
+                "HP": "C_HIGHADDR",
+                "MA": "Data_S2MM",
+                "MX": "/axi_dma",
+                "MI": "M_AXI_S2MM",
+                "MS": "SEG_processing_system7_0_GP0_DDR_LOWOCM",
+                "MV": "xilinx.com:ip:axi_dma:7.1",
+                "SX": "/processing_system7_0",
+                "SI": "S_AXI_GP0",
+                "SS": "GP0_DDR_LOWOCM",
+                "SV": "xilinx.com:ip:processing_system7:5.5",
+                "TM": "both",
+                "TU": "memory"
+            },
+            "V4": {
+                "VT": "AC",
+                "BA": "0xFC000000",
+                "HA": "0xFCFFFFFF",
+                "BP": "C_BASEADDR",
+                "HP": "C_HIGHADDR",
+                "MA": "Data_S2MM",
+                "MX": "/axi_dma",
+                "MI": "M_AXI_S2MM",
+                "MS": "SEG_processing_system7_0_GP0_QSPI_LINEAR",
+                "MV": "xilinx.com:ip:axi_dma:7.1",
+                "SX": "/processing_system7_0",
+                "SI": "S_AXI_GP0",
+                "SS": "GP0_QSPI_LINEAR",
+                "SV": "xilinx.com:ip:processing_system7:5.5",
+                "TM": "both",
+                "TU": "memory"
+            },
+            "V5": {
+                "VT": "ACE",
+                "BA": "0xE0000000",
+                "HA": "0xE03FFFFF",
+                "BP": "C_BASEADDR",
+                "HP": "C_HIGHADDR",
+                "MA": "Data_S2MM",
+                "MX": "/axi_dma",
+                "MI": "M_AXI_S2MM",
+                "MS": "SEG_processing_system7_0_GP0_IOP",
+                "MV": "xilinx.com:ip:axi_dma:7.1",
+                "SX": "/processing_system7_0",
+                "SI": "S_AXI_GP0",
+                "SS": "GP0_IOP",
+                "SV": "xilinx.com:ip:processing_system7:5.5",
+                "TM": "both",
+                "TU": "register"
             }
         },
         "edges": [
@@ -197,6 +251,21 @@
             {
                 "src": "V1",
                 "trg": "V2"
+            },
+            {
+                "src": "V3",
+                "trg": "V2",
+                "EH": "2"
+            },
+            {
+                "src": "V4",
+                "trg": "V2",
+                "EH": "2"
+            },
+            {
+                "src": "V5",
+                "trg": "V2",
+                "EH": "2"
             }
         ]
     }

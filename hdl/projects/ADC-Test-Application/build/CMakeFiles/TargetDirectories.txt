@@ -1,0 +1,3 @@
+/home/tartanauv/TAUV-Acoustics/hdl/projects/ADC-Test-Application/build/CMakeFiles/ADC-Test-Application.elf.dir
+/home/tartanauv/TAUV-Acoustics/hdl/projects/ADC-Test-Application/build/CMakeFiles/edit_cache.dir
+/home/tartanauv/TAUV-Acoustics/hdl/projects/ADC-Test-Application/build/CMakeFiles/rebuild_cache.dir

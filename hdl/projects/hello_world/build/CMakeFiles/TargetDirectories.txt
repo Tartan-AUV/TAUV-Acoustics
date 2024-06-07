@@ -1,0 +1,3 @@
+/home/tartanauv/TAUV-Acoustics/hdl/projects/hello_world/build/CMakeFiles/hello_world.elf.dir
+/home/tartanauv/TAUV-Acoustics/hdl/projects/hello_world/build/CMakeFiles/edit_cache.dir
+/home/tartanauv/TAUV-Acoustics/hdl/projects/hello_world/build/CMakeFiles/rebuild_cache.dir

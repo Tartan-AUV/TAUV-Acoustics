@@ -1,44 +1,57 @@
 {
    "ActiveEmotionalView":"Default View",
-   "Default View_ScaleFactor":"1.83569",
-   "Default View_TopLeft":"-431,-252",
+   "Default View_ScaleFactor":"1.48716",
+   "Default View_TopLeft":"-83,-290",
    "ExpandedHierarchyInLayout":"",
    "PinnedBlocks":"/processing_system7_0|/proc_sys_reset_0|/clk_wiz_0|/LTC6912_Driver_Wrapp_0|",
    "PinnedPorts":"AFE0_CONV_CLK|DDR|FIXED_IO|",
    "guistr":"# # String gsaved with Nlview 7.5.8 2022-09-21 7111 VDI=41 GEI=38 GUI=JA:10.0 TLS
 #  -string -flagsOSRD
-preplace port DDR -pg 1 -lvl 4 -x 880 -y 40 -defaultsOSRD
-preplace port FIXED_IO -pg 1 -lvl 4 -x 880 -y 60 -defaultsOSRD
-preplace port port-id_AFE0_CONV_CLK -pg 1 -lvl 4 -x 880 -y 250 -defaultsOSRD
-preplace port port-id_AFE0_SPI_CS -pg 1 -lvl 4 -x 880 -y 490 -defaultsOSRD
-preplace port port-id_AFE0_SPI_SCK -pg 1 -lvl 4 -x 880 -y 510 -defaultsOSRD
-preplace port port-id_AFE0_SPI_MOSI -pg 1 -lvl 4 -x 880 -y 470 -defaultsOSRD
-preplace port port-id_AFE0_NOTCH_EN_N -pg 1 -lvl 4 -x 880 -y 540 -defaultsOSRD
-preplace port port-id_AFE0_DIR -pg 1 -lvl 4 -x 880 -y 740 -defaultsOSRD
-preplace port port-id_AFE0_BP_SEL -pg 1 -lvl 4 -x 880 -y 690 -defaultsOSRD
-preplace portBus AFE0_BUS -pg 1 -lvl 4 -x 880 -y 790 -defaultsOSRD -right
-preplace inst processing_system7_0 -pg 1 -lvl 2 -x 440 -y 100 -defaultsOSRD
-preplace inst proc_sys_reset_0 -pg 1 -lvl 2 -x 440 -y -130 -defaultsOSRD
-preplace inst clk_wiz_0 -pg 1 -lvl 1 -x 130 -y 260 -defaultsOSRD
-preplace inst LTC6912_Driver_Wrapp_0 -pg 1 -lvl 2 -x 440 -y 500 -defaultsOSRD
-preplace inst system_ila_0 -pg 1 -lvl 3 -x 760 -y 370 -defaultsOSRD
-preplace inst system_ila_1 -pg 1 -lvl 3 -x 760 -y 710 -defaultsOSRD
-preplace netloc AFE0_BUS_1 1 2 2 670 790 N
-preplace netloc LTC6912_Driver_Wrapp_0_cs 1 2 2 660 490 N
-preplace netloc LTC6912_Driver_Wrapp_0_high 1 2 2 N 530 860
-preplace netloc LTC6912_Driver_Wrapp_0_low 1 2 2 N 550 850
-preplace netloc LTC6912_Driver_Wrapp_0_mosi 1 2 2 670 480 860
-preplace netloc LTC6912_Driver_Wrapp_0_sck 1 2 2 650 510 N
-preplace netloc clk_wiz_0_clk_out1 1 1 3 250 250 670 250 N
-preplace netloc processing_system7_0_FCLK_CLK0 1 0 3 20 0 250 -240 630
-preplace netloc processing_system7_0_FCLK_RESET0_N 1 0 3 30 330 260 -230 620
-preplace netloc processing_system7_0_DDR 1 2 2 NJ 40 N
-preplace netloc processing_system7_0_FIXED_IO 1 2 2 NJ 60 N
-levelinfo -pg 1 -20 130 440 760 880
-pagesize -pg 1 -db -bbox -sgen -290 -380 1070 850
+preplace port DDR -pg 1 -lvl 5 -x 1850 -y 40 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -lvl 5 -x 1850 -y 60 -defaultsOSRD
+preplace port port-id_AFE0_CONV_CLK -pg 1 -lvl 5 -x 1850 -y 370 -defaultsOSRD
+preplace port port-id_AFE0_SPI_CS -pg 1 -lvl 5 -x 1850 -y 490 -defaultsOSRD
+preplace port port-id_AFE0_SPI_SCK -pg 1 -lvl 5 -x 1850 -y 510 -defaultsOSRD
+preplace port port-id_AFE0_SPI_MOSI -pg 1 -lvl 5 -x 1850 -y 470 -defaultsOSRD
+preplace port port-id_AFE0_NOTCH_EN_N -pg 1 -lvl 5 -x 1850 -y 540 -defaultsOSRD
+preplace port port-id_AFE0_DIR -pg 1 -lvl 5 -x 1850 -y 590 -defaultsOSRD
+preplace port port-id_AFE0_BP_SEL -pg 1 -lvl 5 -x 1850 -y 690 -defaultsOSRD
+preplace portBus AFE0_BUS -pg 1 -lvl 5 -x 1850 -y 880 -defaultsOSRD -right
+preplace inst processing_system7_0 -pg 1 -lvl 2 -x 870 -y 100 -defaultsOSRD
+preplace inst proc_sys_reset_0 -pg 1 -lvl 2 -x 870 -y -130 -defaultsOSRD
+preplace inst clk_wiz_0 -pg 1 -lvl 1 -x 420 -y 260 -defaultsOSRD
+preplace inst LTC6912_Driver_Wrapp_0 -pg 1 -lvl 2 -x 870 -y 540 -defaultsOSRD
+preplace inst system_ila_0 -pg 1 -lvl 3 -x 1320 -y 370 -defaultsOSRD
+preplace inst system_ila_1 -pg 1 -lvl 3 -x 1320 -y 790 -defaultsOSRD
+preplace inst LTC2236_Driver_Wrapp_0 -pg 1 -lvl 1 -x 420 -y 640 -defaultsOSRD
+preplace inst axi_dma -pg 1 -lvl 2 -x 870 -y 320 -defaultsOSRD
+preplace inst rst_clk_wiz_0_10M -pg 1 -lvl 3 -x 1320 -y 150 -defaultsOSRD
+preplace inst axi_mem_intercon -pg 1 -lvl 4 -x 1680 -y 180 -defaultsOSRD
+preplace inst system_ila_2 -pg 1 -lvl 2 -x 870 -y 850 -defaultsOSRD
+preplace netloc AFE0_BUS_1 1 0 5 220 750 N 750 1080 880 NJ 880 N
+preplace netloc LTC6912_Driver_Wrapp_0_cs 1 2 3 1130 490 N 490 N
+preplace netloc LTC6912_Driver_Wrapp_0_high 1 2 3 N 570 N 570 1830
+preplace netloc LTC6912_Driver_Wrapp_0_low 1 2 3 N 590 N 590 N
+preplace netloc LTC6912_Driver_Wrapp_0_mosi 1 2 3 1120 480 N 480 1830
+preplace netloc LTC6912_Driver_Wrapp_0_sck 1 2 3 1140 510 N 510 N
+preplace netloc clk_wiz_0_clk_out1 1 0 5 220 530 640 -270 1140 20 1500 370 N
+preplace netloc clk_wiz_0_locked 1 1 2 620J -260 1130
+preplace netloc processing_system7_0_FCLK_CLK0 1 0 3 220 330 650 -250 1110
+preplace netloc processing_system7_0_FCLK_RESET0_N 1 0 3 210 340 630 -230 1080
+preplace netloc rst_clk_wiz_0_10M_peripheral_aresetn 1 0 4 200 -280 NJ -280 NJ -280 1530
+preplace netloc LTC2236_Driver_Wrapp_0_m00_axis_tdata 1 1 1 620 610n
+preplace netloc LTC2236_Driver_Wrapp_0_m00_axis 1 1 1 660 300n
+preplace netloc axi_dma_M_AXI_S2MM 1 2 2 1100 30 1520J
+preplace netloc axi_mem_intercon_M00_AXI 1 1 4 660 -240 NJ -240 NJ -240 1830
+preplace netloc processing_system7_0_DDR 1 2 3 NJ 40 N 40 N
+preplace netloc processing_system7_0_FIXED_IO 1 2 3 1090J 50 1510 60 N
+levelinfo -pg 1 0 420 870 1320 1680 1850
+pagesize -pg 1 -db -bbox -sgen -290 -450 2140 1140
 "
 }
 {
+   "da_axi4_cnt":"4",
+   "da_axi4_s2mm_cnt":"4",
    "da_board_cnt":"2",
    "da_clkrst_cnt":"2",
    "da_ps7_cnt":"1"
