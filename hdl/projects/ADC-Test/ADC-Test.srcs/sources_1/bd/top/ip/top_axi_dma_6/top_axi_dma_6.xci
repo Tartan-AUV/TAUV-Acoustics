@@ -1,14 +1,14 @@
 {
   "schema": "xilinx.com:schema:json_instance:1.0",
   "ip_inst": {
-    "xci_name": "top_axi_dma_3",
+    "xci_name": "top_axi_dma_6",
     "cell_name": "axi_dma",
     "component_reference": "xilinx.com:ip:axi_dma:7.1",
     "ip_revision": "30",
-    "gen_directory": "../../../../../../ADC-Test.gen/sources_1/bd/top/ip/top_axi_dma_3",
+    "gen_directory": "../../../../../../ADC-Test.gen/sources_1/bd/top/ip/top_axi_dma_6",
     "parameters": {
       "component_parameters": {
-        "Component_Name": [ { "value": "top_axi_dma_3", "resolve_type": "user", "usage": "all" } ],
+        "Component_Name": [ { "value": "top_axi_dma_6", "resolve_type": "user", "usage": "all" } ],
         "c_include_sg": [ { "value": "0", "value_src": "user", "resolve_type": "user", "format": "long", "usage": "all" } ],
         "c_enable_multi_channel": [ { "value": "0", "resolve_type": "user", "format": "long", "enabled": false, "usage": "all" } ],
         "c_num_mm2s_channels": [ { "value": "1", "resolve_type": "user", "format": "long", "enabled": false, "usage": "all" } ],
@@ -86,7 +86,7 @@
         "IPCONTEXT": [ { "value": "IP_Integrator" } ],
         "IPREVISION": [ { "value": "30" } ],
         "MANAGED": [ { "value": "TRUE" } ],
-        "OUTPUTDIR": [ { "value": "../../../../../../ADC-Test.gen/sources_1/bd/top/ip/top_axi_dma_3" } ],
+        "OUTPUTDIR": [ { "value": "../../../../../../ADC-Test.gen/sources_1/bd/top/ip/top_axi_dma_6" } ],
         "SELECTEDSIMMODEL": [ { "value": "" } ],
         "SHAREDDIR": [ { "value": "../../ipshared" } ],
         "SWVERSION": [ { "value": "2023.2" } ],

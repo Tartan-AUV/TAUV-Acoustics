@@ -5,7 +5,7 @@
     "cell_name": "axi_mem_intercon/s00_couplers/auto_pc",
     "component_reference": "xilinx.com:ip:axi_protocol_converter:2.1",
     "ip_revision": "29",
-    "gen_directory": "../../../../../../ADC-Test.gen/sources_1/bd/top/ip/top_auto_pc_0",
+    "gen_directory": "../../../../../../ADC-Test.gen/sources_1/bd/top/ip/top_auto_pc_0_1",
     "parameters": {
       "component_parameters": {
         "SI_PROTOCOL": [ { "value": "AXI4", "value_src": "user", "value_permission": "bd_and_user", "resolve_type": "user", "usage": "all" } ],
@@ -57,7 +57,7 @@
         "IPCONTEXT": [ { "value": "IP_Integrator" } ],
         "IPREVISION": [ { "value": "29" } ],
         "MANAGED": [ { "value": "TRUE" } ],
-        "OUTPUTDIR": [ { "value": "../../../../../../ADC-Test.gen/sources_1/bd/top/ip/top_auto_pc_0" } ],
+        "OUTPUTDIR": [ { "value": "../../../../../../ADC-Test.gen/sources_1/bd/top/ip/top_auto_pc_0_1" } ],
         "SELECTEDSIMMODEL": [ { "value": "rtl" } ],
         "SHAREDDIR": [ { "value": "../../ipshared" } ],
         "SWVERSION": [ { "value": "2023.2" } ],

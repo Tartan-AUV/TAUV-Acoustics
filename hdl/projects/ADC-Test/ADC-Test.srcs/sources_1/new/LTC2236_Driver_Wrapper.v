@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 module LTC2236_Driver_Wrapper # (
-		parameter integer C_M00_AXIS_TDATA_WIDTH = 32)
+		parameter integer C_M00_AXIS_TDATA_WIDTH = 64)
     (
 		input wire  m00_axis_aclk, // This is the same clock as ADC_CONV_CLK. Currently 10MHz. Must be below 25MHZ.
 		input wire  m00_axis_aresetn,
@@ -29,7 +29,11 @@ module LTC2236_Driver_Wrapper # (
 		output wire [(C_M00_AXIS_TDATA_WIDTH/8)-1 : 0] m00_axis_tstrb,
 		output wire  m00_axis_tlast,
 		input wire  m00_axis_tready,
-        input wire [9:0] data_in
+        input wire [9:0] data_in0,
+        input wire [9:0] data_in1,
+        input wire [9:0] data_in2,
+        input wire [9:0] data_in3,
+        input wire [9:0] data_in4
     );
     
     // Sets TVALID to always be high.
@@ -41,10 +45,10 @@ module LTC2236_Driver_Wrapper # (
     // The bus size must be a multiple of 8 bits, so we do 16 bits.
     always @(posedge m00_axis_aclk) begin
         if (tx_en) begin
-            m00_axis_tdata <= {22'b0, data_in};
+            m00_axis_tdata <= {14'b0, data_in4, data_in3, data_in2, data_in1, data_in0};
         end
         else begin
-            m00_axis_tdata <= 32'b0;
+            m00_axis_tdata <= 64'b0;
         end
     end
     
