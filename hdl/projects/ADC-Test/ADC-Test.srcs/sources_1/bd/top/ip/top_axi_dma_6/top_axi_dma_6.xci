@@ -31,7 +31,7 @@
         "c_include_s2mm_dre": [ { "value": "1", "value_src": "user", "resolve_type": "user", "format": "long", "usage": "all" } ],
         "c_include_s2mm_sf": [ { "value": "1", "resolve_type": "user", "format": "long", "usage": "all" } ],
         "c_s2mm_burst_size": [ { "value": "256", "value_src": "user", "resolve_type": "user", "format": "long", "usage": "all" } ],
-        "c_addr_width": [ { "value": "32", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "c_addr_width": [ { "value": "32", "value_src": "user", "resolve_type": "user", "format": "long", "usage": "all" } ],
         "c_single_interface": [ { "value": "0", "value_permission": "bd_and_user", "resolve_type": "user", "format": "long", "enabled": false, "usage": "all" } ],
         "c_increase_throughput": [ { "value": "0", "resolve_type": "user", "format": "long", "usage": "all" } ]
       },

@@ -1,93 +1,95 @@
 {
    "ActiveEmotionalView":"Default View",
    "Default View_ScaleFactor":"1.25",
-   "Default View_TopLeft":"78,109",
+   "Default View_TopLeft":"-82,-290",
    "ExpandedHierarchyInLayout":"",
    "PinnedBlocks":"/processing_system7_0|/proc_sys_reset_0|/clk_wiz_0|/LTC6912_Driver_Wrapp_0|",
    "PinnedPorts":"AFE0_CONV_CLK|DDR|FIXED_IO|",
    "guistr":"# # String gsaved with Nlview 7.5.8 2022-09-21 7111 VDI=41 GEI=38 GUI=JA:10.0 TLS
 #  -string -flagsOSRD
-preplace port DDR -pg 1 -lvl 5 -x 2030 -y 40 -defaultsOSRD
-preplace port FIXED_IO -pg 1 -lvl 5 -x 2030 -y 60 -defaultsOSRD
-preplace port port-id_AFE0_CONV_CLK -pg 1 -lvl 5 -x 2030 -y 330 -defaultsOSRD
-preplace port port-id_AFE0_SPI_CS -pg 1 -lvl 5 -x 2030 -y 380 -defaultsOSRD
-preplace port port-id_AFE0_SPI_SCK -pg 1 -lvl 5 -x 2030 -y 400 -defaultsOSRD
-preplace port port-id_AFE0_SPI_MOSI -pg 1 -lvl 5 -x 2030 -y 360 -defaultsOSRD
-preplace port port-id_AFE0_NOTCH_EN_N -pg 1 -lvl 5 -x 2030 -y 420 -defaultsOSRD
-preplace port port-id_AFE0_DIR -pg 1 -lvl 5 -x 2030 -y 440 -defaultsOSRD
-preplace port port-id_AFE0_BP_SEL -pg 1 -lvl 5 -x 2030 -y 460 -defaultsOSRD
-preplace port port-id_AFE1_SPI_MOSI -pg 1 -lvl 5 -x 2030 -y 590 -defaultsOSRD
-preplace port port-id_AFE1_CONV_CLK -pg 1 -lvl 5 -x 2030 -y 560 -defaultsOSRD
-preplace port port-id_AFE1_SPI_CS -pg 1 -lvl 5 -x 2030 -y 610 -defaultsOSRD
-preplace port port-id_AFE1_SPI_SCK -pg 1 -lvl 5 -x 2030 -y 630 -defaultsOSRD
-preplace port port-id_AFE1_NOTCH_EN_N -pg 1 -lvl 5 -x 2030 -y 650 -defaultsOSRD
-preplace port port-id_AFE1_DIR -pg 1 -lvl 5 -x 2030 -y 670 -defaultsOSRD
-preplace port port-id_AFE1_BP_SEL -pg 1 -lvl 5 -x 2030 -y 690 -defaultsOSRD
-preplace port port-id_AFE2_CONV_CLK -pg 1 -lvl 5 -x 2030 -y 790 -defaultsOSRD
-preplace port port-id_AFE2_SPI_MOSI -pg 1 -lvl 5 -x 2030 -y 820 -defaultsOSRD
-preplace port port-id_AFE2_SPI_CS -pg 1 -lvl 5 -x 2030 -y 840 -defaultsOSRD
-preplace port port-id_AFE2_SPI_SCK -pg 1 -lvl 5 -x 2030 -y 860 -defaultsOSRD
-preplace port port-id_AFE2_NOTCH_EN_N -pg 1 -lvl 5 -x 2030 -y 880 -defaultsOSRD
-preplace port port-id_AFE2_DIR -pg 1 -lvl 5 -x 2030 -y 900 -defaultsOSRD
-preplace port port-id_AFE2_BP_SEL -pg 1 -lvl 5 -x 2030 -y 920 -defaultsOSRD
-preplace port port-id_AFE3_CONV_CLK -pg 1 -lvl 5 -x 2030 -y 1020 -defaultsOSRD
-preplace port port-id_AFE3_SPI_MOSI -pg 1 -lvl 5 -x 2030 -y 1050 -defaultsOSRD
-preplace port port-id_AFE3_SPI_CS -pg 1 -lvl 5 -x 2030 -y 1070 -defaultsOSRD
-preplace port port-id_AFE3_SPI_SCK -pg 1 -lvl 5 -x 2030 -y 1090 -defaultsOSRD
-preplace port port-id_AFE3_NOTCH_EN_N -pg 1 -lvl 5 -x 2030 -y 1110 -defaultsOSRD
-preplace port port-id_AFE3_DIR -pg 1 -lvl 5 -x 2030 -y 1130 -defaultsOSRD
-preplace port port-id_AFE3_BP_SEL -pg 1 -lvl 5 -x 2030 -y 1150 -defaultsOSRD
-preplace port port-id_AFE4_CONV_CLK -pg 1 -lvl 5 -x 2030 -y 1250 -defaultsOSRD
-preplace port port-id_AFE4_SPI_MOSI -pg 1 -lvl 5 -x 2030 -y 1280 -defaultsOSRD
-preplace port port-id_AFE4_SPI_CS -pg 1 -lvl 5 -x 2030 -y 1300 -defaultsOSRD
-preplace port port-id_AFE4_SPI_SCK -pg 1 -lvl 5 -x 2030 -y 1320 -defaultsOSRD
-preplace port port-id_AFE4_NOTCH_EN_N -pg 1 -lvl 5 -x 2030 -y 1340 -defaultsOSRD
-preplace port port-id_AFE4_DIR -pg 1 -lvl 5 -x 2030 -y 1360 -defaultsOSRD
-preplace port port-id_AFE4_BP_SEL -pg 1 -lvl 5 -x 2030 -y 1380 -defaultsOSRD
-preplace portBus AFE0_BUS -pg 1 -lvl 5 -x 2030 -y 490 -defaultsOSRD -right
-preplace portBus AFE1_BUS -pg 1 -lvl 5 -x 2030 -y 720 -defaultsOSRD -right
-preplace portBus AFE2_BUS -pg 1 -lvl 5 -x 2030 -y 950 -defaultsOSRD -right
-preplace portBus AFE3_BUS -pg 1 -lvl 5 -x 2030 -y 1180 -defaultsOSRD -right
-preplace portBus AFE4_BUS -pg 1 -lvl 5 -x 2030 -y 1410 -defaultsOSRD -right
-preplace inst processing_system7_0 -pg 1 -lvl 2 -x 880 -y 100 -defaultsOSRD
-preplace inst proc_sys_reset_0 -pg 1 -lvl 2 -x 880 -y -130 -defaultsOSRD
-preplace inst clk_wiz_0 -pg 1 -lvl 1 -x 400 -y 260 -defaultsOSRD
-preplace inst LTC6912_Driver_Wrapp_0 -pg 1 -lvl 2 -x 880 -y 540 -defaultsOSRD
-preplace inst system_ila_0 -pg 1 -lvl 3 -x 1390 -y 370 -defaultsOSRD
-preplace inst system_ila_1 -pg 1 -lvl 3 -x 1390 -y 790 -defaultsOSRD
-preplace inst LTC2236_Driver_Wrapp_0 -pg 1 -lvl 1 -x 400 -y 640 -defaultsOSRD
-preplace inst system_ila_2 -pg 1 -lvl 2 -x 880 -y 850 -defaultsOSRD
-preplace inst axi_dma -pg 1 -lvl 2 -x 880 -y 350 -defaultsOSRD
-preplace inst axi_mem_intercon -pg 1 -lvl 4 -x 1770 -y 390 -defaultsOSRD
-preplace inst rst_clk_wiz_0_10M -pg 1 -lvl 3 -x 1390 -y 140 -defaultsOSRD
-preplace netloc AFE0_BUS_1 1 0 5 240 760 630 740 1160 240 NJ 240 2010
-preplace netloc AFE1_BUS_1 1 0 5 230 520 560 670 1150 680 NJ 680 1980J
-preplace netloc AFE2_BUS_1 1 0 5 220 770 N 770 1120 950 NJ 950 NJ
-preplace netloc AFE3_BUS_1 1 0 5 210 780 640 750 1140 930 NJ 930 1950J
-preplace netloc AFE4_BUS_1 1 0 5 200 790 650 760 1130 940 NJ 940 1920J
-preplace netloc LTC6912_Driver_Wrapp_0_cs 1 2 3 1190 250 1570 230 1990
-preplace netloc LTC6912_Driver_Wrapp_0_high 1 1 4 660 650 1120 570 N 570 1970
-preplace netloc LTC6912_Driver_Wrapp_0_low 1 1 4 670 660 1100 590 N 590 1930
-preplace netloc LTC6912_Driver_Wrapp_0_mosi 1 2 3 1200 480 1610 260 1960
-preplace netloc LTC6912_Driver_Wrapp_0_sck 1 2 3 1210 490 1620 270 1940
-preplace netloc clk_wiz_0_clk_out1 1 0 5 220 510 670 250 1180 20 1590 220 2000
-preplace netloc clk_wiz_0_locked 1 1 2 560J 240 1120
-preplace netloc processing_system7_0_FCLK_CLK0 1 0 3 230 330 620 -240 1170
-preplace netloc processing_system7_0_FCLK_RESET0_N 1 0 3 230 190 660 -250 1100
-preplace netloc rst_clk_wiz_0_10M_peripheral_aresetn 1 0 4 200 -260 NJ -260 NJ -260 1600
-preplace netloc LTC2236_Driver_Wrapp_0_m00_axis 1 1 1 630 330n
-preplace netloc axi_dma_M_AXI_S2MM 1 2 2 1100J 260 1570
-preplace netloc axi_mem_intercon_M00_AXI 1 1 4 670 -230 NJ -230 NJ -230 1930
-preplace netloc processing_system7_0_DDR 1 2 3 1120J 30 1620 40 N
-preplace netloc processing_system7_0_FIXED_IO 1 2 3 1130J 40 1570 60 N
-levelinfo -pg 1 0 400 880 1390 1770 2030
-pagesize -pg 1 -db -bbox -sgen -290 -450 2260 1440
+preplace port DDR -pg 1 -lvl 5 -x 2170 -y 40 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -lvl 5 -x 2170 -y 60 -defaultsOSRD
+preplace port port-id_AFE0_CONV_CLK -pg 1 -lvl 5 -x 2170 -y 330 -defaultsOSRD
+preplace port port-id_AFE0_SPI_CS -pg 1 -lvl 5 -x 2170 -y 380 -defaultsOSRD
+preplace port port-id_AFE0_SPI_SCK -pg 1 -lvl 5 -x 2170 -y 400 -defaultsOSRD
+preplace port port-id_AFE0_SPI_MOSI -pg 1 -lvl 5 -x 2170 -y 360 -defaultsOSRD
+preplace port port-id_AFE0_NOTCH_EN_N -pg 1 -lvl 5 -x 2170 -y 420 -defaultsOSRD
+preplace port port-id_AFE0_DIR -pg 1 -lvl 5 -x 2170 -y 440 -defaultsOSRD
+preplace port port-id_AFE0_BP_SEL -pg 1 -lvl 5 -x 2170 -y 460 -defaultsOSRD
+preplace port port-id_AFE1_SPI_MOSI -pg 1 -lvl 5 -x 2170 -y 590 -defaultsOSRD
+preplace port port-id_AFE1_CONV_CLK -pg 1 -lvl 5 -x 2170 -y 560 -defaultsOSRD
+preplace port port-id_AFE1_SPI_CS -pg 1 -lvl 5 -x 2170 -y 610 -defaultsOSRD
+preplace port port-id_AFE1_SPI_SCK -pg 1 -lvl 5 -x 2170 -y 630 -defaultsOSRD
+preplace port port-id_AFE1_NOTCH_EN_N -pg 1 -lvl 5 -x 2170 -y 650 -defaultsOSRD
+preplace port port-id_AFE1_DIR -pg 1 -lvl 5 -x 2170 -y 670 -defaultsOSRD
+preplace port port-id_AFE1_BP_SEL -pg 1 -lvl 5 -x 2170 -y 690 -defaultsOSRD
+preplace port port-id_AFE2_CONV_CLK -pg 1 -lvl 5 -x 2170 -y 790 -defaultsOSRD
+preplace port port-id_AFE2_SPI_MOSI -pg 1 -lvl 5 -x 2170 -y 820 -defaultsOSRD
+preplace port port-id_AFE2_SPI_CS -pg 1 -lvl 5 -x 2170 -y 840 -defaultsOSRD
+preplace port port-id_AFE2_SPI_SCK -pg 1 -lvl 5 -x 2170 -y 860 -defaultsOSRD
+preplace port port-id_AFE2_NOTCH_EN_N -pg 1 -lvl 5 -x 2170 -y 880 -defaultsOSRD
+preplace port port-id_AFE2_DIR -pg 1 -lvl 5 -x 2170 -y 900 -defaultsOSRD
+preplace port port-id_AFE2_BP_SEL -pg 1 -lvl 5 -x 2170 -y 920 -defaultsOSRD
+preplace port port-id_AFE3_CONV_CLK -pg 1 -lvl 5 -x 2170 -y 1020 -defaultsOSRD
+preplace port port-id_AFE3_SPI_MOSI -pg 1 -lvl 5 -x 2170 -y 1050 -defaultsOSRD
+preplace port port-id_AFE3_SPI_CS -pg 1 -lvl 5 -x 2170 -y 1070 -defaultsOSRD
+preplace port port-id_AFE3_SPI_SCK -pg 1 -lvl 5 -x 2170 -y 1090 -defaultsOSRD
+preplace port port-id_AFE3_NOTCH_EN_N -pg 1 -lvl 5 -x 2170 -y 1110 -defaultsOSRD
+preplace port port-id_AFE3_DIR -pg 1 -lvl 5 -x 2170 -y 1130 -defaultsOSRD
+preplace port port-id_AFE3_BP_SEL -pg 1 -lvl 5 -x 2170 -y 1150 -defaultsOSRD
+preplace port port-id_AFE4_CONV_CLK -pg 1 -lvl 5 -x 2170 -y 1250 -defaultsOSRD
+preplace port port-id_AFE4_SPI_MOSI -pg 1 -lvl 5 -x 2170 -y 1280 -defaultsOSRD
+preplace port port-id_AFE4_SPI_CS -pg 1 -lvl 5 -x 2170 -y 1300 -defaultsOSRD
+preplace port port-id_AFE4_SPI_SCK -pg 1 -lvl 5 -x 2170 -y 1320 -defaultsOSRD
+preplace port port-id_AFE4_NOTCH_EN_N -pg 1 -lvl 5 -x 2170 -y 1340 -defaultsOSRD
+preplace port port-id_AFE4_DIR -pg 1 -lvl 5 -x 2170 -y 1360 -defaultsOSRD
+preplace port port-id_AFE4_BP_SEL -pg 1 -lvl 5 -x 2170 -y 1380 -defaultsOSRD
+preplace portBus AFE0_BUS -pg 1 -lvl 5 -x 2170 -y 490 -defaultsOSRD -right
+preplace portBus AFE1_BUS -pg 1 -lvl 5 -x 2170 -y 720 -defaultsOSRD -right
+preplace portBus AFE2_BUS -pg 1 -lvl 5 -x 2170 -y 950 -defaultsOSRD -right
+preplace portBus AFE3_BUS -pg 1 -lvl 5 -x 2170 -y 1180 -defaultsOSRD -right
+preplace portBus AFE4_BUS -pg 1 -lvl 5 -x 2170 -y 1410 -defaultsOSRD -right
+preplace inst processing_system7_0 -pg 1 -lvl 2 -x 920 -y 100 -defaultsOSRD
+preplace inst proc_sys_reset_0 -pg 1 -lvl 2 -x 920 -y -130 -defaultsOSRD
+preplace inst clk_wiz_0 -pg 1 -lvl 1 -x 440 -y 260 -defaultsOSRD
+preplace inst LTC6912_Driver_Wrapp_0 -pg 1 -lvl 2 -x 920 -y 540 -defaultsOSRD
+preplace inst system_ila_0 -pg 1 -lvl 3 -x 1480 -y 370 -defaultsOSRD
+preplace inst system_ila_1 -pg 1 -lvl 3 -x 1480 -y 790 -defaultsOSRD
+preplace inst LTC2236_Driver_Wrapp_0 -pg 1 -lvl 1 -x 440 -y 1000 -defaultsOSRD
+preplace inst system_ila_2 -pg 1 -lvl 2 -x 920 -y 850 -defaultsOSRD
+preplace inst axi_dma -pg 1 -lvl 2 -x 920 -y 350 -defaultsOSRD
+preplace inst rst_clk_wiz_0_10M -pg 1 -lvl 3 -x 1480 -y 140 -defaultsOSRD
+preplace inst axi_mem_intercon -pg 1 -lvl 4 -x 1940 -y -160 -defaultsOSRD
+preplace inst axis_data_fifo_0 -pg 1 -lvl 1 -x 440 -y 500 -defaultsOSRD
+preplace netloc AFE0_BUS_1 1 0 5 250 780 610 760 1300 490 NJ 490 N
+preplace netloc AFE1_BUS_1 1 0 5 260 870 630 930 1210 900 1660J 720 NJ
+preplace netloc AFE2_BUS_1 1 0 5 280 880 610 940 1230 950 NJ 950 NJ
+preplace netloc AFE3_BUS_1 1 0 5 280 1120 600 1100 1270 1180 NJ 1180 NJ
+preplace netloc AFE4_BUS_1 1 0 5 260 1130 650 1110 1300 1410 NJ 1410 NJ
+preplace netloc LTC6912_Driver_Wrapp_0_cs 1 2 3 1270 240 N 240 2120
+preplace netloc LTC6912_Driver_Wrapp_0_high 1 1 4 670 660 1170 620 N 620 2130
+preplace netloc LTC6912_Driver_Wrapp_0_low 1 1 4 690 670 1150 630 N 630 2090
+preplace netloc LTC6912_Driver_Wrapp_0_mosi 1 2 3 1260 250 N 250 2110
+preplace netloc LTC6912_Driver_Wrapp_0_sck 1 2 3 1290 260 N 260 2100
+preplace netloc clk_wiz_0_clk_out1 1 0 5 270 590 650 -230 1300 20 1790 20 2140
+preplace netloc clk_wiz_0_locked 1 1 2 670J 250 1190
+preplace netloc processing_system7_0_FCLK_CLK0 1 0 3 280 330 660 680 1280
+preplace netloc processing_system7_0_FCLK_RESET0_N 1 0 3 280 190 680 -240 1150
+preplace netloc rst_clk_wiz_0_10M_peripheral_aresetn 1 0 4 240 670 610J 650 NJ 650 1780
+preplace netloc processing_system7_0_DDR 1 2 3 1160J 30 N 30 2150
+preplace netloc processing_system7_0_FIXED_IO 1 2 3 1170J 40 N 40 2100
+preplace netloc axi_dma_M_AXI_S2MM 1 2 2 1180J 10 1660
+preplace netloc axi_mem_intercon_M00_AXI 1 1 4 690 -280 NJ -280 NJ -280 2100
+preplace netloc LTC2236_Driver_Wrapp_0_m00_axis 1 0 2 280 410 600
+preplace netloc axis_data_fifo_0_M_AXIS 1 1 1 670 330n
+levelinfo -pg 1 0 440 920 1480 1940 2170
+pagesize -pg 1 -db -bbox -sgen -290 -450 2440 1850
 "
 }
 {
-   "da_axi4_cnt":"7",
+   "da_axi4_cnt":"8",
    "da_axi4_s2mm_cnt":"7",
    "da_board_cnt":"2",
-   "da_clkrst_cnt":"2",
+   "da_clkrst_cnt":"3",
    "da_ps7_cnt":"1"
 }

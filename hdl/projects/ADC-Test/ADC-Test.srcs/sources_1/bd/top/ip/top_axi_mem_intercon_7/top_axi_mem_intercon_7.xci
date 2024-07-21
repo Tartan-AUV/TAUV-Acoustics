@@ -1,11 +1,11 @@
 {
   "schema": "xilinx.com:schema:json_instance:1.0",
   "ip_inst": {
-    "xci_name": "top_axi_mem_intercon_6",
+    "xci_name": "top_axi_mem_intercon_7",
     "cell_name": "axi_mem_intercon",
     "component_reference": "xilinx.com:ip:axi_interconnect:2.1",
     "ip_revision": "30",
-    "gen_directory": "../../../../../../ADC-Test.gen/sources_1/bd/top/ip/top_axi_mem_intercon_6",
+    "gen_directory": "../../../../../../ADC-Test.gen/sources_1/bd/top/ip/top_axi_mem_intercon_7",
     "parameters": {
       "component_parameters": {
         "NUM_SI": [ { "value": "1", "resolve_type": "user", "format": "long", "usage": "all" } ],
@@ -322,7 +322,7 @@
         "S13_ARB_PRIORITY": [ { "value": "0", "resolve_type": "user", "format": "long", "usage": "all" } ],
         "S14_ARB_PRIORITY": [ { "value": "0", "resolve_type": "user", "format": "long", "usage": "all" } ],
         "S15_ARB_PRIORITY": [ { "value": "0", "resolve_type": "user", "format": "long", "usage": "all" } ],
-        "Component_Name": [ { "value": "top_axi_mem_intercon_6", "resolve_type": "user", "usage": "all" } ]
+        "Component_Name": [ { "value": "top_axi_mem_intercon_7", "resolve_type": "user", "usage": "all" } ]
       },
       "project_parameters": {
         "ARCHITECTURE": [ { "value": "zynq" } ],
@@ -341,7 +341,7 @@
         "IPCONTEXT": [ { "value": "IP_Integrator_AppCore" } ],
         "IPREVISION": [ { "value": "30" } ],
         "MANAGED": [ { "value": "TRUE" } ],
-        "OUTPUTDIR": [ { "value": "../../../../../../ADC-Test.gen/sources_1/bd/top/ip/top_axi_mem_intercon_6" } ],
+        "OUTPUTDIR": [ { "value": "../../../../../../ADC-Test.gen/sources_1/bd/top/ip/top_axi_mem_intercon_7" } ],
         "SELECTEDSIMMODEL": [ { "value": "" } ],
         "SHAREDDIR": [ { "value": "../../ipshared" } ],
         "SWVERSION": [ { "value": "2023.2" } ],
